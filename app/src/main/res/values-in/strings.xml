@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigasi -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_sounds">Suara mesin</string>
+    <string name="nav_bluetooth">Perangkat Bluetooth</string>
+    <string name="nav_settings">Pengaturan</string>
+    <string name="nav_about">Tentang &amp; kontribusi</string>
+    <string name="nav_exit">Matikan mesin &amp; keluar</string>
+    <string name="open_menu">Buka menu</string>
+    <string name="close">Tutup</string>
+    <string name="back">Kembali</string>
+    <string name="refresh">Muat ulang</string>
+    <string name="preview">Coba</string>
+
+    <!-- Beranda -->
+    <string name="home_tagline">Suara mesin untuk motor listrikmu</string>
+    <string name="home_sounds_title">Suara mesin (%1$d)</string>
+    <string name="show_all">Lihat semua</string>
+    <string name="add_sound_title">Tambah suara</string>
+    <string name="add_sound_sub">Buat bersama komunitas</string>
+    <string name="banner_on_title">Mesin menyala · %1$s</string>
+    <string name="banner_on_sub">Kecepatan GPS mengatur putaran mesin</string>
+    <string name="banner_off_title">Mesin mati</string>
+    <string name="banner_off_sub">Ketuk untuk menyalakan suara mesin</string>
+    <string name="off_short">Mati</string>
+    <string name="tap_to_start">ketuk untuk nyala</string>
+    <string name="bt_row_title">Nyala otomatis via Bluetooth</string>
+    <string name="bt_row_none">Belum ada perangkat terdaftar</string>
+    <string name="bt_row_auto_off">Nyala otomatis dimatikan</string>
+    <string name="widgets">Widget</string>
+    <string name="speed_title">Kecepatan</string>
+    <string name="unit_kmh">km/j</string>
+    <string name="kmh_value">%1$d km/j</string>
+    <string name="rpm_title">RPM &amp; gigi</string>
+    <string name="rpm_unit_k">×1000 rpm</string>
+    <string name="n1_title">Putaran N1</string>
+    <string name="n1_unit" formatted="false">% N1</string>
+    <string name="motor_title">Putaran motor</string>
+    <string name="motor_unit" formatted="false">% putaran motor</string>
+    <string name="dock_rpm">RPM</string>
+    <string name="dock_gear">Gigi</string>
+    <string name="gear_short_neutral">N</string>
+    <string name="hint_hold">Tahan untuk gas</string>
+    <string name="throttle_cd">Tuas gas. Tekan dan tahan untuk menggeber mesin.</string>
+
+    <!-- GPS -->
+    <string name="gps_off">GPS mati · nyalakan mesin</string>
+    <string name="gps_no_permission">Perlu izin lokasi</string>
+    <string name="gps_disabled">GPS sedang mati</string>
+    <string name="gps_searching">Mencari satelit…</string>
+    <string name="gps_fix">GPS terkunci</string>
+
+    <!-- Suara -->
+    <string name="spec_turbine">%1$s · putaran halus</string>
+    <string name="spec_piston">%1$d gigi · redline %2$s rpm</string>
+    <string name="sounds_footer">Suara dibuat secara real-time di ponselmu — tanpa rekaman, tanpa internet. Pengembang dapat menambah mesin baru di modul engine-core (lihat docs/ADDING_ENGINE_SOUND.md).</string>
+
+    <string name="engine_jet_turbine_name">Mesin Jet</string>
+    <string name="engine_jet_turbine_desc">Desing turbofan dan gemuruh knalpot jet yang berputar naik perlahan mengikuti kecepatanmu — paling mudah didengar pengendara lain.</string>
+    <string name="engine_jet_whine_name">Mesin Jet Nging</string>
+    <string name="engine_jet_whine_desc">Hanya suara desing turbin “nging” yang makin tinggi mengikuti kecepatan — tanpa suara hembusan angin atau gemuruh.</string>
+    <string name="engine_jet_hum_name">Mesin Jet Ngung</string>
+    <string name="engine_jet_hum_desc">Hanya dengung turbin “ngung” yang berat dan naik mengikuti kecepatan — tanpa desing tinggi atau hembusan angin.</string>
+    <string name="engine_bullet_train_motor_name">Dinamo Kereta Cepat</string>
+    <string name="engine_bullet_train_motor_desc">Suara motor traksi listrik kereta cepat: dengung magnetik yang naik mengikuti kecepatan dan desing inverter yang paling keras saat menarik.</string>
+    <string name="engine_v_twin_cruiser_name">V-Twin Cruiser</string>
+    <string name="engine_v_twin_cruiser_desc">V-twin 45° yang berat dan khas dengan idle tidak rata serta girboks virtual 5 percepatan.</string>
+    <string name="engine_inline_four_sport_name">Inline-4 Sport</string>
+    <string name="engine_inline_four_sport_desc">Motor sport 4 silinder yang melengking hingga 14.000 rpm lewat 6 gigi virtual, lengkap dengan letupan knalpot.</string>
+    <string name="engine_two_stroke_racer_name">2-Tak Racing</string>
+    <string name="engine_two_stroke_racer_desc">Mesin 2-tak satu silinder yang nyaring dengan karakter \"ring-ding\" khas motor balap jalanan.</string>
+
+    <!-- Bluetooth -->
+    <string name="bt_auto_title">Nyala otomatis</string>
+    <string name="bt_auto_sub">Mesin menyala saat perangkat terdaftar tersambung dan mati saat terputus</string>
+    <string name="bt_battery_hint">Izinkan OmoZ berjalan tanpa batasan baterai, jika tidak Android bisa memblokir nyala otomatis.</string>
+    <string name="bt_permission_needed">OmoZ butuh izin Perangkat sekitar untuk melihat perangkat Bluetooth-mu.</string>
+    <string name="bt_off">Bluetooth sedang mati.</string>
+    <string name="bt_registered">Perangkat terdaftar</string>
+    <string name="bt_paired">Perangkat tersandingkan</string>
+    <string name="bt_none_paired">Belum ada perangkat tersandingkan. Sandingkan speaker, helm, atau unit motor di pengaturan Android terlebih dahulu.</string>
+    <string name="bt_all_registered">Semua perangkat sudah terdaftar.</string>
+    <string name="bt_connected">Tersambung</string>
+    <string name="bt_register">Daftarkan</string>
+    <string name="bt_unregister">Hapus</string>
+    <string name="bt_footer">Tips: daftarkan speaker Bluetooth yang terpasang di motor atau intercom helm. Suara mesin otomatis keluar dari perangkat itu.</string>
+    <string name="grant">Izinkan</string>
+    <string name="fix_now">Atur</string>
+    <string name="open_settings">Buka</string>
+
+    <!-- Pengaturan -->
+    <string name="status_ok">Aktif</string>
+    <string name="status_needed">Perlu</string>
+    <string name="section_background">Latar belakang</string>
+    <string name="section_permissions">Izin</string>
+    <string name="section_sound">Suara</string>
+    <string name="section_battery">Baterai</string>
+    <string name="set_run_bg">Tetap jalan saat ditutup</string>
+    <string name="set_run_bg_sub">Mesin tetap berbunyi walau aplikasi ditinggalkan atau dikeluarkan dari daftar terbaru</string>
+    <string name="set_battery_opt">Baterai tanpa batasan</string>
+    <string name="set_battery_opt_sub">Mencegah Android mematikan mesin dan mengizinkan nyala otomatis Bluetooth</string>
+    <string name="set_autostart">Autostart &amp; latar belakang</string>
+    <string name="set_autostart_sub_oem">Buka pengelola autostart / latar belakang %1$s</string>
+    <string name="set_autostart_sub_generic">Buka info aplikasi (%1$s) untuk mengizinkan aktivitas latar belakang</string>
+    <string name="set_wakelock">Jaga CPU tetap aktif</string>
+    <string name="set_wakelock_sub">Hanya untuk ponsel yang memutus suara saat layar mati. Lebih boros baterai.</string>
+    <string name="set_guide">Panduan untuk ponselmu</string>
+    <string name="set_guide_sub">%1$s · langkah demi langkah di dontkillmyapp.com</string>
+    <string name="perm_location">Lokasi akurat (GPS)</string>
+    <string name="perm_location_sub">Dibutuhkan untuk membaca kecepatan</string>
+    <string name="perm_location_approx">Hanya lokasi perkiraan — kecepatan butuh lokasi akurat</string>
+    <string name="perm_bg_location">Lokasi sepanjang waktu</string>
+    <string name="perm_bg_location_sub">Agar nyala otomatis Bluetooth bisa memakai GPS saat aplikasi tertutup</string>
+    <string name="perm_bluetooth">Perangkat sekitar (Bluetooth)</string>
+    <string name="perm_bluetooth_sub">Untuk mendeteksi perangkat Bluetooth terdaftar</string>
+    <string name="perm_notifications">Notifikasi</string>
+    <string name="perm_notifications_sub">Menampilkan kontrol mesin saat berjalan di latar belakang</string>
+    <string name="set_volume">Volume</string>
+    <string name="set_full_speed">Kecepatan redline</string>
+    <string name="set_full_speed_sub">Kecepatan saat mesin mencapai RPM tertinggi. Turunkan untuk skuter kota.</string>
+    <string name="set_speed_volume">Makin kencang makin keras</string>
+    <string name="set_speed_volume_sub">Volume naik mengikuti kecepatan</string>
+    <string name="set_mute_stopped">Senyap saat berhenti</string>
+    <string name="set_mute_stopped_sub">Tanpa suara idle di lampu merah</string>
+    <string name="set_gps_mode">Frekuensi GPS</string>
+    <string name="set_gps_mode_sub">Lebih cepat = RPM lebih halus, lebih boros baterai</string>
+    <string name="gps_accurate">0,5 dtk</string>
+    <string name="gps_balanced">1 dtk</string>
+    <string name="gps_saver">3 dtk</string>
+    <string name="gps_custom">Kustom</string>
+    <string name="gps_custom_label">Interval GPS</string>
+    <string name="seconds_short">dtk</string>
+    <string name="apply">Terapkan</string>
+    <string name="gps_custom_hint">Sekitar %1$s pembaruan per detik. Banyak HP hanya mengirim GPS maksimal 1× per detik; nilai lebih kecil dari kemampuan chip tidak membuatnya lebih cepat dan lebih boros baterai.</string>
+    <string name="gps_custom_invalid">Masukkan 0,1 sampai 60 detik.</string>
+    <string name="set_audio_quality">Kualitas audio</string>
+    <string name="set_audio_quality_sub">Mode hemat memangkas beban proses hingga setengah</string>
+    <string name="audio_high">Tinggi 44 kHz</string>
+    <string name="audio_saver">Hemat 22 kHz</string>
+    <string name="set_auto_stop">Mati otomatis saat parkir</string>
+    <string name="set_auto_stop_sub">Matikan mesin setelah diam selama</string>
+    <string name="minutes_short">%1$d mnt</string>
+    <string name="battery_tip" formatted="false">Pemakaian umum: sekitar 3–6% baterai per jam dengan layar mati (GPS 1 dtk, kualitas tinggi).</string>
+
+    <!-- Notifikasi -->
+    <string name="channel_engine">Mesin menyala</string>
+    <string name="channel_engine_desc">Notifikasi tetap selama suara mesin aktif</string>
+    <string name="channel_alerts">Peringatan</string>
+    <string name="channel_alerts_desc">Ajakan nyala otomatis</string>
+    <string name="notif_title">OmoZ · %1$s</string>
+    <string name="notif_starting">Menyalakan mesin…</string>
+    <string name="notif_text">%1$d km/j · %2$s · %3$s</string>
+    <string name="gear_neutral">Idle</string>
+    <string name="gear_value">Gigi %1$d</string>
+    <string name="rpm_value">%1$d rpm</string>
+    <string name="n1_value">N1 %1$d%%</string>
+    <string name="motor_value">Motor %1$d%%</string>
+    <string name="action_rev">Geber</string>
+    <string name="action_stop">Matikan</string>
+    <string name="prompt_start_title">Perangkat Bluetooth tersambung</string>
+    <string name="prompt_start_text">Ketuk untuk menyalakan suara mesin. Agar langkah ini tidak perlu, izinkan baterai tanpa batasan untuk OmoZ di Pengaturan.</string>
+
+    <!-- Tentang -->
+    <string name="about_version">Versi %1$s · %2$d suara mesin</string>
+    <string name="about_body">Motor listrik hampir tanpa suara, sehingga pengendara lain dan pejalan kaki sering tidak sadar sampai kamu tepat di sampingnya. OmoZ memutar suara mesin sintetis yang mengikuti kecepatanmu yang sebenarnya, supaya orang bisa mendengar kamu datang.</string>
+    <string name="about_contribute_title">Berkontribusi</string>
+    <string name="about_contribute_body">OmoZ bersifat open source. Tambahkan suara mesin di engine-core (docs/ADDING_ENGINE_SOUND.md), terjemahkan aplikasi (res/values-xx), atau tambahkan layar autostart ponselmu di SystemSettings.kt. Dengarkan suara di komputer dengan ./gradlew :engine-core:renderPreviews.</string>
+    <string name="about_safety_title">Berkendara dengan aman</string>
+    <string name="about_safety_body">Gunakan volume yang wajar dan patuhi aturan setempat tentang suara kendaraan. OmoZ adalah alat bantu kewaspadaan, bukan pengganti klakson, lampu, atau berkendara dengan waspada.</string>
+    <string name="about_licenses_title">Lisensi</string>
+    <string name="about_licenses_body">OmoZ — GNU AGPL-3.0-or-later, atau lisensi komersial lewat tier Komersial GitHub Sponsors (lihat COMMERCIAL-LICENSE.md). Font Poppins — SIL Open Font License 1.1. AndroidX / Jetpack Compose — Apache 2.0. Ikon — Material Symbols (Apache 2.0) dan karya orisinal. Tidak berafiliasi dengan OMOWAY.</string>
+
+    <!-- Support, update -->
+    <string name="nav_support">Dukung OmoZ</string>
+    <string name="nav_update">Pembaruan aplikasi</string>
+    <string name="home_update_title">OmoZ %1$s sudah tersedia</string>
+    <string name="home_update_sub">Ketuk untuk melihat yang baru dan memperbarui</string>
+    <string name="about_support_sub">Donasi, kontribusi, atau bagikan OmoZ</string>
+    <string name="about_update_sub">Periksa versi baru</string>
+    <string name="about_source">Kode sumber</string>
+    <string name="about_license_row">Lisensi</string>
+    <string name="about_license_row_sub">AGPL-3.0 · lisensi komersial lewat GitHub Sponsors</string>
+    <string name="update_notify_channel">Pembaruan aplikasi</string>
+    <string name="update_notify_title">OmoZ %1$s sudah tersedia</string>
+    <string name="update_notify_text">Ketuk untuk memperbarui ke versi terbaru.</string>
+    <string name="update_title">Pembaruan aplikasi</string>
+    <string name="update_installed">Versi terpasang</string>
+    <string name="update_checking">Memeriksa pembaruan…</string>
+    <string name="update_up_to_date">Kamu sudah memakai versi terbaru</string>
+    <string name="update_last_checked">Terakhir diperiksa %1$s</string>
+    <string name="update_check_again">Periksa lagi</string>
+    <string name="update_available">OmoZ %1$s sudah tersedia</string>
+    <string name="update_size">Ukuran unduhan %1$s</string>
+    <string name="update_whats_new">Yang baru</string>
+    <string name="update_download">Unduh dan pasang</string>
+    <string name="update_open_page">Buka halaman rilis</string>
+    <string name="update_downloading">Mengunduh OmoZ %1$s…</string>
+    <string name="update_cancel">Batal</string>
+    <string name="update_ready">OmoZ %1$s siap dipasang</string>
+    <string name="update_ready_body">Android akan meminta konfirmasi. Pengaturan dan perangkat Bluetooth tersimpan tidak hilang.</string>
+    <string name="update_needs_permission">Izinkan \"Instal aplikasi tidak dikenal\" untuk OmoZ, lalu kembali dan ketuk Pasang sekarang.</string>
+    <string name="update_install">Pasang sekarang</string>
+    <string name="update_failed_title">Pembaruan gagal</string>
+    <string name="update_failed_network">Tidak bisa terhubung ke GitHub. Periksa koneksi internet lalu coba lagi.</string>
+    <string name="update_failed_checksum">File unduhan rusak (checksum tidak cocok) dan sudah dihapus. Coba lagi.</string>
+    <string name="update_failed_invalid">File yang diunduh bukan rilis OmoZ yang lebih baru, jadi tidak dipasang.</string>
+    <string name="update_failed_storage">Ruang penyimpanan tidak cukup untuk menyimpan pembaruan.</string>
+    <string name="update_retry">Coba lagi</string>
+    <string name="update_auto_title">Periksa otomatis</string>
+    <string name="update_auto_caption">Diperiksa sekitar dua kali sehari dan kamu diberi notifikasi saat ada versi baru.</string>
+    <string name="update_safety_note">Pembaruan hanya diambil dari rilis resmi di github.com/LogicSekai/OmoZ dan diperiksa sebelum dipasang.</string>
+    <string name="update_disabled_title">Pembaruan dikelola toko aplikasi</string>
+    <string name="update_disabled_body">Salinan OmoZ ini diperbarui lewat Google Play (atau tempat kamu memasangnya).</string>
+    <string name="support_title">Dukung OmoZ</string>
+    <string name="support_hero_title">Gratis dan open source</string>
+    <string name="support_hero_body">OmoZ dibuat oleh komunitas Logic Sekai. Dukunganmu membiayai pengembangan, pengujian di lebih banyak HP, dan suara mesin baru.</string>
+    <string name="support_section_donate">Donasi</string>
+    <string name="support_sponsor">GitHub Sponsors</string>
+    <string name="support_sponsor_caption">Sponsor repository · sekaligus lisensi komersial</string>
+    <string name="support_kofi">Ko-fi</string>
+    <string name="support_kofi_caption">Traktir kopi · PayPal atau kartu</string>
+    <string name="support_trakteer">Trakteer</string>
+    <string name="support_trakteer_caption">Dukungan dari Indonesia · QRIS, e-wallet, bank</string>
+    <string name="support_section_contribute">Kontribusi</string>
+    <string name="support_code">Kode sumber dan Pull Request</string>
+    <string name="support_code_caption">Suara mesin baru, perbaikan, terjemahan</string>
+    <string name="support_issue">Laporkan bug atau usulkan fitur</string>
+    <string name="support_issue_caption">Sertakan tipe HP dan versi Android</string>
+    <string name="support_guide">Cara berkontribusi</string>
+    <string name="support_guide_caption">Alur kerja, gaya kode, dan perjanjian kontributor</string>
+    <string name="support_community">Komunitas Logic Sekai</string>
+    <string name="support_share">Bagikan OmoZ</string>
+    <string name="support_share_text">OmoZ: suara mesin untuk motor listrik, gratis dan open source. %1$s</string>
+    <string name="support_thanks">Terima kasih untuk setiap bintang, laporan bug, Pull Request, dan donasi. ❤️</string>
+    <string name="set_update_version">Versi %1$s</string>
+    <string name="set_update_open">Periksa pembaruan, catatan rilis, dan pasang</string>
+    <string name="set_update_open_new">Ketuk untuk melihat yang baru dan memperbarui</string>
+    <string name="set_update_latest">Terbaru</string>
+    <string name="set_update_new">Baru</string>
+</resources>

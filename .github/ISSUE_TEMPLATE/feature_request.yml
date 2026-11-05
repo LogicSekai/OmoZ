@@ -1,0 +1,29 @@
+name: Usulan fitur / Feature request
+description: Usulkan fitur atau suara mesin baru untuk OmoZ
+title: "[Fitur] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Masalah apa yang ingin diselesaikan?
+      placeholder: Saat berkendara saya ingin ...
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Usulan
+      description: Untuk suara mesin baru, sebutkan jenis mesin dan contoh referensinya.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatif yang sudah dicoba
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Mau membantu?
+      options:
+        - label: Saya bersedia membuat Pull Request untuk fitur ini

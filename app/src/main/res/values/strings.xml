@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">OmoZ</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_sounds">Engine sounds</string>
+    <string name="nav_bluetooth">Bluetooth devices</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about">About &amp; contribute</string>
+    <string name="nav_exit">Stop engine &amp; exit</string>
+    <string name="open_menu">Open menu</string>
+    <string name="close">Close</string>
+    <string name="back">Back</string>
+    <string name="refresh">Refresh</string>
+    <string name="preview">Preview</string>
+
+    <!-- Home -->
+    <string name="home_tagline">Engine sound for your electric ride</string>
+    <string name="home_sounds_title">Engine sounds (%1$d)</string>
+    <string name="show_all">Show all</string>
+    <string name="add_sound_title">Add a sound</string>
+    <string name="add_sound_sub">Build one with the community</string>
+    <string name="banner_on_title">Engine on · %1$s</string>
+    <string name="banner_on_sub">Speed from GPS drives the RPM</string>
+    <string name="banner_off_title">Engine off</string>
+    <string name="banner_off_sub">Tap to start the engine sound</string>
+    <string name="off_short">Off</string>
+    <string name="tap_to_start">tap to start</string>
+    <string name="bt_row_title">Bluetooth auto-start</string>
+    <string name="bt_row_none">No device registered yet</string>
+    <string name="bt_row_auto_off">Auto-start is turned off</string>
+    <string name="widgets">Widgets</string>
+    <string name="speed_title">Speed</string>
+    <string name="unit_kmh">km/h</string>
+    <string name="kmh_value">%1$d km/h</string>
+    <string name="rpm_title">RPM &amp; gear</string>
+    <string name="rpm_unit_k">×1000 rpm</string>
+    <string name="n1_title">Spool N1</string>
+    <string name="n1_unit" formatted="false">% N1</string>
+    <string name="motor_title">Motor output</string>
+    <string name="motor_unit" formatted="false">% motor speed</string>
+    <string name="dock_rpm">RPM</string>
+    <string name="dock_gear">Gear</string>
+    <string name="gear_short_neutral">N</string>
+    <string name="hint_hold">Hold to throttle</string>
+    <string name="throttle_cd">Throttle. Press and hold to rev the engine.</string>
+
+    <!-- GPS -->
+    <string name="gps_off">GPS off · start the engine</string>
+    <string name="gps_no_permission">Location permission needed</string>
+    <string name="gps_disabled">GPS is turned off</string>
+    <string name="gps_searching">Searching for satellites…</string>
+    <string name="gps_fix">GPS locked</string>
+
+    <!-- Sounds -->
+    <string name="spec_turbine">%1$s · smooth, no gears</string>
+    <string name="spec_piston">%1$d gears · redline %2$s rpm</string>
+    <string name="sounds_footer">Sounds are synthesized in real time on your phone — no recordings, no internet. Developers can add new engines in the engine-core module (see docs/ADDING_ENGINE_SOUND.md).</string>
+
+    <string name="engine_jet_turbine_name">Jet Turbine</string>
+    <string name="engine_jet_turbine_desc">Turbofan whine and exhaust roar that spools up slowly with your speed — the most noticeable sound for traffic around you.</string>
+    <string name="engine_jet_whine_name">Jet Whine</string>
+    <string name="engine_jet_whine_desc">Only the high-pitched turbine “nging” that climbs with your speed — no wind or exhaust roar.</string>
+    <string name="engine_jet_hum_name">Jet Hum</string>
+    <string name="engine_jet_hum_desc">Only the deep turbine “ngung” hum that rises with your speed — no high whine or wind.</string>
+    <string name="engine_bullet_train_motor_name">Bullet Train Motor</string>
+    <string name="engine_bullet_train_motor_desc">Electric traction motor of a high-speed train: rising magnetic hum and inverter whine that is loudest while pulling away.</string>
+    <string name="engine_v_twin_cruiser_name">V-Twin Cruiser</string>
+    <string name="engine_v_twin_cruiser_desc">Deep, lumpy 45° V-twin with the classic uneven idle and a 5-speed virtual gearbox.</string>
+    <string name="engine_inline_four_sport_name">Inline-4 Sport</string>
+    <string name="engine_inline_four_sport_desc">Smooth superbike that screams to 14,000 rpm through 6 virtual gears, with over-run crackles.</string>
+    <string name="engine_two_stroke_racer_name">2-Stroke Racer</string>
+    <string name="engine_two_stroke_racer_desc">Raspy single-cylinder two-stroke with a ring-ding power band — the classic street racer.</string>
+
+    <!-- Bluetooth -->
+    <string name="bt_auto_title">Start automatically</string>
+    <string name="bt_auto_sub">Turn the engine on when a registered device connects and off when it disconnects</string>
+    <string name="bt_battery_hint">Allow OmoZ to run without battery restrictions, otherwise Android may block the auto-start.</string>
+    <string name="bt_permission_needed">OmoZ needs the Nearby devices permission to see your Bluetooth devices.</string>
+    <string name="bt_off">Bluetooth is off.</string>
+    <string name="bt_registered">Registered devices</string>
+    <string name="bt_paired">Paired devices</string>
+    <string name="bt_none_paired">No paired devices. Pair your speaker, helmet or bike unit in Android settings first.</string>
+    <string name="bt_all_registered">All paired devices are registered.</string>
+    <string name="bt_connected">Connected</string>
+    <string name="bt_register">Register</string>
+    <string name="bt_unregister">Unregister</string>
+    <string name="bt_footer">Tip: register the Bluetooth speaker mounted on your bike or your helmet intercom. The engine sound plays through it automatically.</string>
+    <string name="grant">Allow</string>
+    <string name="fix_now">Fix</string>
+    <string name="open_settings">Open</string>
+
+    <!-- Settings -->
+    <string name="status_ok">Active</string>
+    <string name="status_needed">Needed</string>
+    <string name="section_background">Background</string>
+    <string name="section_permissions">Permissions</string>
+    <string name="section_sound">Sound</string>
+    <string name="section_battery">Battery</string>
+    <string name="set_run_bg">Keep running when closed</string>
+    <string name="set_run_bg_sub">The engine keeps playing after you leave or swipe away the app</string>
+    <string name="set_battery_opt">Unrestricted battery</string>
+    <string name="set_battery_opt_sub">Stops Android from killing the engine and allows Bluetooth auto-start</string>
+    <string name="set_autostart">Autostart &amp; background</string>
+    <string name="set_autostart_sub_oem">Open the %1$s autostart / background manager</string>
+    <string name="set_autostart_sub_generic">Open app settings (%1$s) to allow background activity</string>
+    <string name="set_wakelock">Keep CPU awake</string>
+    <string name="set_wakelock_sub">Only for phones that cut the sound with the screen off. Uses more battery.</string>
+    <string name="set_guide">Guide for your phone</string>
+    <string name="set_guide_sub">%1$s · step-by-step on dontkillmyapp.com</string>
+    <string name="perm_location">Precise location (GPS)</string>
+    <string name="perm_location_sub">Needed to read your speed</string>
+    <string name="perm_location_approx">Only approximate location granted — speed needs precise</string>
+    <string name="perm_bg_location">Location all the time</string>
+    <string name="perm_bg_location_sub">Lets Bluetooth auto-start use GPS while the app is closed</string>
+    <string name="perm_bluetooth">Nearby devices (Bluetooth)</string>
+    <string name="perm_bluetooth_sub">To detect your registered Bluetooth device</string>
+    <string name="perm_notifications">Notifications</string>
+    <string name="perm_notifications_sub">Shows engine controls while running in background</string>
+    <string name="set_volume">Volume</string>
+    <string name="set_full_speed">Redline speed</string>
+    <string name="set_full_speed_sub">The speed at which the engine reaches top RPM. Lower it for city scooters.</string>
+    <string name="set_speed_volume">Louder at speed</string>
+    <string name="set_speed_volume_sub">Raise the volume as you go faster</string>
+    <string name="set_mute_stopped">Silent when stopped</string>
+    <string name="set_mute_stopped_sub">No idle sound at traffic lights</string>
+    <string name="set_gps_mode">GPS update rate</string>
+    <string name="set_gps_mode_sub">Faster = smoother RPM, more battery</string>
+    <string name="gps_accurate">0.5 s</string>
+    <string name="gps_balanced">1 s</string>
+    <string name="gps_saver">3 s</string>
+    <string name="gps_custom">Custom</string>
+    <string name="gps_custom_label">GPS interval</string>
+    <string name="seconds_short">s</string>
+    <string name="apply">Apply</string>
+    <string name="gps_custom_hint">About %1$s updates per second. Many phones deliver GPS at most 1× per second; a smaller value than the chip supports will not make it faster and uses more battery.</string>
+    <string name="gps_custom_invalid">Enter 0.1 to 60 seconds.</string>
+    <string name="set_audio_quality">Audio quality</string>
+    <string name="set_audio_quality_sub">Saver halves the processing cost</string>
+    <string name="audio_high">High 44 kHz</string>
+    <string name="audio_saver">Saver 22 kHz</string>
+    <string name="set_auto_stop">Auto-stop when parked</string>
+    <string name="set_auto_stop_sub">Turn the engine off after standing still</string>
+    <string name="minutes_short">%1$d min</string>
+    <string name="battery_tip" formatted="false">Typical use: about 3–6% battery per hour with the screen off (GPS 1 s, high quality).</string>
+
+    <!-- Notification -->
+    <string name="channel_engine">Engine running</string>
+    <string name="channel_engine_desc">Persistent notification while the engine sound is active</string>
+    <string name="channel_alerts">Alerts</string>
+    <string name="channel_alerts_desc">Auto-start prompts</string>
+    <string name="notif_title">OmoZ · %1$s</string>
+    <string name="notif_starting">Starting engine…</string>
+    <string name="notif_text">%1$d km/h · %2$s · %3$s</string>
+    <string name="gear_neutral">Idle</string>
+    <string name="gear_value">Gear %1$d</string>
+    <string name="rpm_value">%1$d rpm</string>
+    <string name="n1_value">N1 %1$d%%</string>
+    <string name="motor_value">Motor %1$d%%</string>
+    <string name="action_rev">Rev</string>
+    <string name="action_stop">Stop</string>
+    <string name="prompt_start_title">Bluetooth device connected</string>
+    <string name="prompt_start_text">Tap to start the engine sound. To skip this step, allow unrestricted battery for OmoZ in Settings.</string>
+
+    <!-- About -->
+    <string name="about_version">Version %1$s · %2$d engine sounds</string>
+    <string name="about_body">Electric motorbikes are almost silent, so other riders and pedestrians often don\'t notice you until you are right next to them. OmoZ plays a synthesized engine sound that follows your real speed, so people can hear you coming.</string>
+    <string name="about_contribute_title">Contribute</string>
+    <string name="about_contribute_body">OmoZ is open source. Add an engine sound in engine-core (docs/ADDING_ENGINE_SOUND.md), translate the app (res/values-xx), or add your phone\'s autostart screen in SystemSettings.kt. Render sounds on your computer with ./gradlew :engine-core:renderPreviews.</string>
+    <string name="about_safety_title">Ride safely</string>
+    <string name="about_safety_body">Keep the volume reasonable and follow local rules about vehicle sound. OmoZ is an awareness aid, not a replacement for a horn, lights or attentive riding.</string>
+    <string name="about_licenses_title">Licenses</string>
+    <string name="about_licenses_body">OmoZ — GNU AGPL-3.0-or-later, or a commercial license through the Komersial tier of GitHub Sponsors (see COMMERCIAL-LICENSE.md). Poppins font — SIL Open Font License 1.1. AndroidX / Jetpack Compose — Apache 2.0. Icons — Material Symbols (Apache 2.0) and original artwork. Not affiliated with OMOWAY.</string>
+
+    <!-- Support, update -->
+    <string name="nav_support">Support OmoZ</string>
+    <string name="nav_update">App update</string>
+    <string name="home_update_title">OmoZ %1$s is available</string>
+    <string name="home_update_sub">Tap to see what\'s new and update</string>
+    <string name="about_support_sub">Donate, contribute or share OmoZ</string>
+    <string name="about_update_sub">Check for a new version</string>
+    <string name="about_source">Source code</string>
+    <string name="about_license_row">License</string>
+    <string name="about_license_row_sub">AGPL-3.0 · commercial license via GitHub Sponsors</string>
+    <string name="update_notify_channel">App updates</string>
+    <string name="update_notify_title">OmoZ %1$s is available</string>
+    <string name="update_notify_text">Tap to update to the latest version.</string>
+    <string name="update_title">App update</string>
+    <string name="update_installed">Installed version</string>
+    <string name="update_checking">Checking for updates…</string>
+    <string name="update_up_to_date">You have the latest version</string>
+    <string name="update_last_checked">Last checked %1$s</string>
+    <string name="update_check_again">Check again</string>
+    <string name="update_available">OmoZ %1$s is available</string>
+    <string name="update_size">Download size %1$s</string>
+    <string name="update_whats_new">What\'s new</string>
+    <string name="update_download">Download and install</string>
+    <string name="update_open_page">Open release page</string>
+    <string name="update_downloading">Downloading OmoZ %1$s…</string>
+    <string name="update_cancel">Cancel</string>
+    <string name="update_ready">OmoZ %1$s is ready to install</string>
+    <string name="update_ready_body">Android will ask you to confirm. Your settings and Bluetooth devices are kept.</string>
+    <string name="update_needs_permission">Allow \"Install unknown apps\" for OmoZ, then come back and tap Install now.</string>
+    <string name="update_install">Install now</string>
+    <string name="update_failed_title">Update failed</string>
+    <string name="update_failed_network">Could not reach GitHub. Check your internet connection and try again.</string>
+    <string name="update_failed_checksum">The download was damaged (checksum mismatch) and was deleted. Try again.</string>
+    <string name="update_failed_invalid">The downloaded file is not a newer OmoZ release, so it was not installed.</string>
+    <string name="update_failed_storage">Not enough storage to save the update.</string>
+    <string name="update_retry">Try again</string>
+    <string name="update_auto_title">Check automatically</string>
+    <string name="update_auto_caption">Checks about twice a day and notifies you when a new version is out.</string>
+    <string name="update_safety_note">Updates come only from the official releases at github.com/LogicSekai/OmoZ and are checked before installing.</string>
+    <string name="update_disabled_title">Updates are managed by the store</string>
+    <string name="update_disabled_body">This copy of OmoZ is updated through Google Play (or the place you installed it from).</string>
+    <string name="support_title">Support OmoZ</string>
+    <string name="support_hero_title">Free and open source</string>
+    <string name="support_hero_body">OmoZ is built by the Logic Sekai community. Your support pays for development, testing on more phones and new engine sounds.</string>
+    <string name="support_section_donate">Donate</string>
+    <string name="support_sponsor">GitHub Sponsors</string>
+    <string name="support_sponsor_caption">Sponsor the repository · also the commercial license</string>
+    <string name="support_kofi">Ko-fi</string>
+    <string name="support_kofi_caption">Buy us a coffee · PayPal or card</string>
+    <string name="support_trakteer">Trakteer</string>
+    <string name="support_trakteer_caption">Support from Indonesia · QRIS, e-wallet, bank</string>
+    <string name="support_section_contribute">Contribute</string>
+    <string name="support_code">Source code and pull requests</string>
+    <string name="support_code_caption">New engine sounds, fixes, translations</string>
+    <string name="support_issue">Report a bug or suggest a feature</string>
+    <string name="support_issue_caption">Include your phone model and Android version</string>
+    <string name="support_guide">How to contribute</string>
+    <string name="support_guide_caption">Workflow, code style and the contributor agreement</string>
+    <string name="support_community">Logic Sekai community</string>
+    <string name="support_share">Share OmoZ</string>
+    <string name="support_share_text">OmoZ: engine sound for electric motorbikes, free and open source. %1$s</string>
+    <string name="support_thanks">Thank you for every star, bug report, pull request and donation. ❤️</string>
+    <string name="set_update_version">Version %1$s</string>
+    <string name="set_update_open">Check for updates, release notes and install</string>
+    <string name="set_update_open_new">Tap to see what\'s new and update</string>
+    <string name="set_update_latest">Latest</string>
+    <string name="set_update_new">New</string>
+</resources>

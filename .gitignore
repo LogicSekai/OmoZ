@@ -1,0 +1,54 @@
+# ---------------------------------------------------------------
+# OmoZ .gitignore
+# ---------------------------------------------------------------
+
+# Gradle / Kotlin
+.gradle/
+build/
+.kotlin/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Android Studio / IntelliJ
+/local.properties
+/captures/
+.externalNativeBuild/
+.cxx/
+*.iml
+.idea/
+.navigation/
+
+# Build outputs (APK/AAB are published via GitHub Releases, not committed)
+/dist/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.hprof
+output-metadata.json
+
+# Signing & secrets — never commit these (back them up outside the repo)
+/keystore/
+/keystore.properties
+*.jks
+*.keystore
+.env
+.env.*
+
+# Local helper state and output
+/scripts/.wifi-device
+/verify-build.bat
+/verify-*.txt
+*.log
+
+# Local archives
+/OmoZ-source.zip
+
+# Editors
+.vscode/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

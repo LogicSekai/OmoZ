@@ -1,0 +1,60 @@
+name: Laporan bug / Bug report
+description: Laporkan masalah di OmoZ
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Terima kasih sudah melapor! Untuk **celah keamanan**, jangan pakai form ini; lihat SECURITY.md.
+  - type: textarea
+    id: what
+    attributes:
+      label: Apa yang terjadi?
+      description: Jelaskan masalahnya dan apa yang seharusnya terjadi.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Langkah reproduksi
+      placeholder: |
+        1. Pilih suara Mesin Jet
+        2. Nyalakan mesin, kunci layar
+        3. Berkendara 5 menit
+        4. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Bagian yang bermasalah
+      options:
+        - Suara mesin / audio
+        - Kecepatan GPS / RPM
+        - Nyala otomatis Bluetooth
+        - Berjalan di latar belakang / mati sendiri
+        - Pembaruan aplikasi
+        - Tampilan / lainnya
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versi OmoZ
+      description: Lihat menu Tentang atau Pembaruan aplikasi
+      placeholder: OmoZ 1.0.0 (100)
+    validations:
+      required: true
+  - type: input
+    id: phone
+    attributes:
+      label: Merek & model HP, versi Android / ROM
+      placeholder: Xiaomi Redmi Note 13, Android 14, HyperOS 1.0
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Log / screenshot / info tambahan
+      description: "Log: adb logcat -s OmoZService OmoZAudio OmoZBt OmoZUpdate"
