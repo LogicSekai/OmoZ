@@ -184,6 +184,7 @@ class EngineService : Service() {
             player?.let {
                 it.rpm = state.rpmNorm
                 it.load = state.load
+                it.shift = state.shift
                 it.volume = vol
             }
             EngineRuntime.publish(speed, tracker.status, state)

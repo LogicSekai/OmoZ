@@ -39,7 +39,13 @@ fun engineStyle(info: EngineInfo, index: Int): EngineStyle = when (info.id) {
     "jet_hum" -> EngineStyle(Blue, Color.White, ArtStyle.TURBINE)
     "bullet_train_motor" -> EngineStyle(Orange, Color.White, ArtStyle.ELECTRIC)
     "v_twin_cruiser" -> EngineStyle(Orange, Color.White, ArtStyle.V_TWIN)
+    "big_twin_classic" -> EngineStyle(Navy, Color.White, ArtStyle.V_TWIN)
     "inline_four_sport" -> EngineStyle(Blue, Color.White, ArtStyle.INLINE_FOUR)
+    "inline_four_250" -> EngineStyle(Navy, Sky, ArtStyle.INLINE_FOUR)
+    "inline_four_400" -> EngineStyle(Sky, Navy, ArtStyle.INLINE_FOUR)
+    "inline_four_600" -> EngineStyle(Blue, Color.White, ArtStyle.INLINE_FOUR)
+    "inline_four_1000" -> EngineStyle(Orange, Color.White, ArtStyle.INLINE_FOUR)
+    "supercharged_four_1000" -> EngineStyle(Navy, Color.White, ArtStyle.INLINE_FOUR)
     "two_stroke_racer" -> EngineStyle(Sky, Blue, ArtStyle.SINGLE)
     else -> {
         val palette = listOf(Navy to Color.White, Orange to Color.White, Blue to Color.White, Sky to Blue)

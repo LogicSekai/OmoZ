@@ -48,6 +48,14 @@ Then add it to `all`.
 | `crackle` | Over-run pops when the throttle closes at high RPM. |
 | `trackedResonance*` | Expansion-chamber resonance that follows RPM, strongest in the power band (2-strokes). |
 | `outputGain` | Loudness trim — aim for a similar level to the existing sounds. |
+| `idleLope`, `missChance` | Old big-twin idle: slow wander of the idle speed and occasional weak firings. Both fade out off idle. |
+| `valveTick` | Valvetrain / primary-chain clatter, added after the exhaust filters so it stays crisp. |
+| `shiftClunk`, `shiftDip` | Gearbox clunk and exhaust dip on a gear change. Needs `shiftSeconds` in `EngineInfo`. |
+| `superchargerWhine`, `superchargerRatio`, `blowOff` | Supercharger whine (pitch = crank speed × ratio, louder with rpm and load) and a chirp when the load collapses at speed. |
+
+Gearbox settings live in `EngineInfo`: `gears`, `gearRpmLow` / `gearRpmHigh` (rpm after and before an
+upshift, 0 = idle, 1 = redline) and `shiftSeconds` (clutch-in time with a throttle cut; 0 = instant).
+See `bigTwinClassic` in `EngineCatalog` for an example that uses all of them.
 
 ## 2. Something completely different
 

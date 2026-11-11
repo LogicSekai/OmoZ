@@ -44,6 +44,18 @@ data class EngineInfo(
     val spoolDownSeconds: Float,
     /** Whether the simulator should bounce off a rev limiter at redline. */
     val hasRevLimiter: Boolean = true,
+    /** Geared engines: normalized rpm right after an upshift (where a gear 2+ starts). */
+    val gearRpmLow: Float = 0.42f,
+    /** Geared engines: normalized rpm at which the virtual gearbox shifts up. */
+    val gearRpmHigh: Float = 0.9f,
+    /**
+     * Geared engines: how long a gear change takes (clutch in, throttle closed, clutch out).
+     * During it the load drops to zero and [SynthParams.shift] tells the synth to play the
+     * shift. 0 = instant shifts without a throttle cut.
+     */
+    val shiftSeconds: Float = 0f,
+    /** Number of cylinders (0 = not a piston engine). Used to group sounds in the app. */
+    val cylinders: Int = 0,
     /** Short spec line, e.g. "2 cyl · 45° V · 4-stroke". */
     val specs: String = "",
     /** Community credit. */
@@ -58,6 +70,12 @@ class SynthParams {
     @JvmField var load: Float = 0f
     /** 0..1 output gain. */
     @JvmField var volume: Float = 1f
+    /**
+     * Gear change in progress: 1 the moment a gear changes, fading to 0 when the clutch is
+     * back out. Synths may play a gearbox clunk and dip the exhaust. Always 0 for engines
+     * without [EngineInfo.shiftSeconds].
+     */
+    @JvmField var shift: Float = 0f
 }
 
 /** A real-time sound generator. Implementations must not allocate inside [render]. */

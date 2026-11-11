@@ -17,8 +17,14 @@
     <string name="home_tagline">Suara mesin untuk motor listrikmu</string>
     <string name="home_sounds_title">Suara mesin (%1$d)</string>
     <string name="show_all">Lihat semua</string>
-    <string name="add_sound_title">Tambah suara</string>
-    <string name="add_sound_sub">Buat bersama komunitas</string>
+    <string name="sound_group_jet">Mesin jet</string>
+    <string name="sound_group_electric">Motor listrik</string>
+    <string name="sound_group_twin">V-twin</string>
+    <string name="sound_group_four">4 silinder</string>
+    <string name="sound_group_two_stroke">2-tak</string>
+    <string name="sound_group_other">Lainnya</string>
+    <string name="home_more_title">Pilih lainnya</string>
+    <string name="home_more_sub">%1$d suara lainnya, dikelompokkan per jenis mesin</string>
     <string name="banner_on_title">Mesin menyala · %1$s</string>
     <string name="banner_on_sub">Kecepatan GPS mengatur putaran mesin</string>
     <string name="banner_off_title">Mesin mati</string>
@@ -66,8 +72,20 @@
     <string name="engine_bullet_train_motor_desc">Suara motor traksi listrik kereta cepat: dengung magnetik yang naik mengikuti kecepatan dan desing inverter yang paling keras saat menarik.</string>
     <string name="engine_v_twin_cruiser_name">V-Twin Cruiser</string>
     <string name="engine_v_twin_cruiser_desc">V-twin 45° yang berat dan khas dengan idle tidak rata serta girboks virtual 5 percepatan.</string>
+    <string name="engine_big_twin_classic_name">Big Twin Klasik</string>
+    <string name="engine_big_twin_classic_desc">V-twin 45° 1340 cc gaya lawas: idle rendah yang naik-turun, knalpot terbuka, ketukan klep, dan girboks 4 percepatan yang berbunyi \"klonk\" saat pindah gigi, lengkap dengan gas terputus dan letupan saat gas dilepas.</string>
     <string name="engine_inline_four_sport_name">Inline-4 Sport</string>
     <string name="engine_inline_four_sport_desc">Motor sport 4 silinder yang melengking hingga 14.000 rpm lewat 6 gigi virtual, lengkap dengan letupan knalpot.</string>
+    <string name="engine_inline_four_250_name">Inline-4 250</string>
+    <string name="engine_inline_four_250_desc">Mesin 4 silinder 250 cc yang melengking sampai 17.000 rpm, dengan raungan intake, pembatas putaran yang tegas, dan perpindahan 6 gigi ala quickshifter.</string>
+    <string name="engine_inline_four_400_name">Inline-4 400</string>
+    <string name="engine_inline_four_400_desc">Mesin 4 silinder 400 cc yang lebih berisi dari versi 250, melengking sampai 16.000 rpm dengan perpindahan 6 gigi ala quickshifter.</string>
+    <string name="engine_inline_four_600_name">Inline-4 600</string>
+    <string name="engine_inline_four_600_desc">Motor supersport 4 silinder kelas menengah: raungan tajam sampai 16.000 rpm, letupan saat gas dilepas, dan quickshift yang renyah.</string>
+    <string name="engine_inline_four_1000_name">Inline-4 1000</string>
+    <string name="engine_inline_four_1000_desc">Superbike 4 silinder 1000 cc: gonggongan berat di putaran bawah, raungan buas sampai 14.000 rpm, dan letupan keras saat gas dilepas.</string>
+    <string name="engine_supercharged_four_1000_name">Supercharged 1000</string>
+    <string name="engine_supercharged_four_1000_desc">Superbike 1000 cc dengan supercharger: suara knalpot superbike ditambah desing supercharger yang naik mengikuti putaran dan boost, serta bunyi \"cuit\" saat gas dilepas.</string>
     <string name="engine_two_stroke_racer_name">2-Tak Racing</string>
     <string name="engine_two_stroke_racer_desc">Mesin 2-tak satu silinder yang nyaring dengan karakter \"ring-ding\" khas motor balap jalanan.</string>
 

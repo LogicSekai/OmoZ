@@ -79,7 +79,9 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         EngineRuntime.setThrottleHeld(held)
     }
 
-    fun selectEngine(id: String) = repo.update { it.copy(engineId = id) }
+    fun selectEngine(id: String) = repo.update {
+        it.copy(engineId = id, recentEngineIds = (listOf(id) + it.recentEngineIds.filter { r -> r != id }).take(RECENT_ENGINES))
+    }
 
     fun preview(id: String) {
         selectEngine(id)
@@ -107,3 +109,6 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         if (enabled) refreshBluetooth()
     }
 }
+
+/** How many recently used sounds are remembered. */
+private const val RECENT_ENGINES = 6

@@ -24,6 +24,7 @@ class EngineAudioPlayer(private val sampleRate: Int) {
     @Volatile var rpm = 0f
     @Volatile var load = 0f
     @Volatile var volume = 0f
+    @Volatile var shift = 0f
 
     @Volatile private var pendingSound: EngineSound? = null
     @Volatile private var active = false
@@ -88,7 +89,7 @@ class EngineAudioPlayer(private val sampleRate: Int) {
                     pendingSound = null
                     // Fade the old synth out over one block to avoid a click.
                     synth?.let { old ->
-                        params.rpm = rpm; params.load = load; params.volume = 0f
+                        params.rpm = rpm; params.load = load; params.volume = 0f; params.shift = 0f
                         old.render(fbuf, BLOCK, params)
                         writeBlock(track, fbuf, sbuf)
                     }
@@ -99,6 +100,7 @@ class EngineAudioPlayer(private val sampleRate: Int) {
                 params.rpm = rpm
                 params.load = load
                 params.volume = volume
+                params.shift = shift
                 s.render(fbuf, BLOCK, params)
                 val written = writeBlock(track, fbuf, sbuf)
                 if (written < 0) {

@@ -24,6 +24,8 @@ data class RegisteredDevice(val address: String, val name: String)
 
 data class AppSettings(
     val engineId: String = EngineCatalog.default.info.id,
+    /** Recently chosen engine ids, newest first (shown as shortcuts on the home screen). */
+    val recentEngineIds: List<String> = emptyList(),
     val masterVolume: Float = 0.8f,
     /** Speed where the engine is near redline in top gear. */
     val fullScaleSpeedKmh: Float = 80f,
@@ -78,6 +80,7 @@ class SettingsRepository(context: Context) {
         val d = AppSettings()
         return AppSettings(
             engineId = prefs.getString(K_ENGINE, d.engineId) ?: d.engineId,
+            recentEngineIds = (prefs.getString(K_RECENT_ENGINES, "") ?: "").split(',').filter { it.isNotBlank() },
             masterVolume = prefs.getFloat(K_VOLUME, d.masterVolume),
             fullScaleSpeedKmh = prefs.getFloat(K_FULL_SPEED, d.fullScaleSpeedKmh),
             speedSensitiveVolume = prefs.getBoolean(K_SPEED_VOL, d.speedSensitiveVolume),
@@ -98,6 +101,7 @@ class SettingsRepository(context: Context) {
     private fun write(s: AppSettings) {
         prefs.edit()
             .putString(K_ENGINE, s.engineId)
+            .putString(K_RECENT_ENGINES, s.recentEngineIds.joinToString(","))
             .putFloat(K_VOLUME, s.masterVolume)
             .putFloat(K_FULL_SPEED, s.fullScaleSpeedKmh)
             .putBoolean(K_SPEED_VOL, s.speedSensitiveVolume)
@@ -127,6 +131,7 @@ class SettingsRepository(context: Context) {
     private companion object {
         const val SEP = '|'
         const val K_ENGINE = "engine_id"
+        const val K_RECENT_ENGINES = "recent_engines"
         const val K_VOLUME = "master_volume"
         const val K_FULL_SPEED = "full_scale_speed"
         const val K_SPEED_VOL = "speed_sensitive_volume"

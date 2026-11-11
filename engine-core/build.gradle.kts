@@ -23,7 +23,7 @@ dependencies {
     testImplementation(libs.junit)
 }
 
-/** ./gradlew :engine-core:renderPreviews → engine-core/build/previews/*.wav */
+// ./gradlew :engine-core:renderPreviews → engine-core/build/previews/<id>.wav
 tasks.register<JavaExec>("renderPreviews") {
     group = "omoz"
     description = "Render every engine sound to a WAV file for listening on a computer."

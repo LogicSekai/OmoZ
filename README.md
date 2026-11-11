@@ -17,7 +17,7 @@ Motor listrik hampir tanpa suara, sehingga pengendara lain sering kaget saat tib
 
 | | |
 |---|---|
-| 🔊 **7 suara mesin** | **Mesin Jet** (turbofan, wajib), **Mesin Jet Nging** (desing turbin saja), **Mesin Jet Ngung** (dengung turbin saja), **Dinamo Kereta Cepat** (motor traksi listrik), V-Twin Cruiser, Inline-4 Sport, 2-Tak Racing — semua disintesis real-time, tanpa file rekaman |
+| 🔊 **13 suara mesin** | **Mesin Jet** (turbofan, wajib), **Mesin Jet Nging** (desing turbin saja), **Mesin Jet Ngung** (dengung turbin saja), **Dinamo Kereta Cepat** (motor traksi listrik), V-Twin Cruiser, **Big Twin Klasik** (V-twin 1340 cc dengan 4 percepatan), Inline-4 Sport, keluarga **Inline-4 250 / 400 / 600 / 1000** dan **Supercharged 1000** (4 silinder kecil sampai superbike, dengan quickshifter), 2-Tak Racing — semua disintesis real-time, tanpa file rekaman |
 | 🛰️ **RPM dari GPS** | Kecepatan → putaran mesin + girboks virtual (jet: spool halus tanpa gigi) |
 | 🎚️ **Tombol gas** | Tekan & tahan tombol bulat untuk menggeber mesin; tombol "Geber" juga ada di notifikasi |
 | 📶 **Nyala otomatis Bluetooth** | Daftarkan perangkat → mesin nyala saat tersambung, mati saat terputus |
@@ -129,7 +129,7 @@ Baca [CONTRIBUTING.md](CONTRIBUTING.md) untuk mulai berkontribusi dan [docs/ADDI
 
 **OmoZ** makes silent electric motorbikes audible. It synthesizes an engine sound in real time whose RPM follows your GPS speed, keeps running in the background (even after the app is swiped away), and can switch on automatically when the phone connects to a registered Bluetooth device.
 
-- 7 engines: **Jet Turbine** (required), **Jet Whine** (whine only), **Jet Hum** (low hum only), **Bullet Train Motor** (electric traction), V-Twin Cruiser, Inline-4 Sport, 2-Stroke Racer — procedural audio, no samples.
+- 13 engines: **Jet Turbine** (required), **Jet Whine** (whine only), **Jet Hum** (low hum only), **Bullet Train Motor** (electric traction), V-Twin Cruiser, **Big Twin Classic** (1340 cc V-twin, 4-speed), Inline-4 Sport, the **Inline-4 250 / 400 / 600 / 1000** and **Supercharged 1000** family (small fours to superbikes, with quick-shifter), 2-Stroke Racer — procedural audio, no samples.
 - Hold-to-throttle button + "Rev" notification action.
 - Settings for background running, battery optimization, OEM autostart screens, wake lock, GPS rate, audio quality and auto-stop.
 - No Google Play Services dependency; works on every brand (Android 8.0+).

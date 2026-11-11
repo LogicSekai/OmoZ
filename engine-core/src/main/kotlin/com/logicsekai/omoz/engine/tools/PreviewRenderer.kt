@@ -36,6 +36,7 @@ object PreviewRenderer {
             val st = sim.update(dt, speed, throttle, 100f)
             params.rpm = st.rpmNorm
             params.load = st.load
+            params.shift = st.shift
             params.volume = if (t < 0.3f) t / 0.3f else 1f
             val n = minOf(block, total - pos)
             synth.render(buf, n, params)

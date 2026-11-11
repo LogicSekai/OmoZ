@@ -19,8 +19,14 @@
     <string name="home_tagline">Engine sound for your electric ride</string>
     <string name="home_sounds_title">Engine sounds (%1$d)</string>
     <string name="show_all">Show all</string>
-    <string name="add_sound_title">Add a sound</string>
-    <string name="add_sound_sub">Build one with the community</string>
+    <string name="sound_group_jet">Jet engines</string>
+    <string name="sound_group_electric">Electric motors</string>
+    <string name="sound_group_twin">V-twins</string>
+    <string name="sound_group_four">Inline fours</string>
+    <string name="sound_group_two_stroke">Two-strokes</string>
+    <string name="sound_group_other">Other</string>
+    <string name="home_more_title">More sounds</string>
+    <string name="home_more_sub">%1$d more, grouped by engine type</string>
     <string name="banner_on_title">Engine on · %1$s</string>
     <string name="banner_on_sub">Speed from GPS drives the RPM</string>
     <string name="banner_off_title">Engine off</string>
@@ -68,8 +74,20 @@
     <string name="engine_bullet_train_motor_desc">Electric traction motor of a high-speed train: rising magnetic hum and inverter whine that is loudest while pulling away.</string>
     <string name="engine_v_twin_cruiser_name">V-Twin Cruiser</string>
     <string name="engine_v_twin_cruiser_desc">Deep, lumpy 45° V-twin with the classic uneven idle and a 5-speed virtual gearbox.</string>
+    <string name="engine_big_twin_classic_name">Big Twin Classic</string>
+    <string name="engine_big_twin_classic_desc">Old-school 1340 cc 45° V-twin: a low, hunting idle, open pipes, valve clatter and a clunky 4-speed with throttle cuts and overrun pops.</string>
     <string name="engine_inline_four_sport_name">Inline-4 Sport</string>
     <string name="engine_inline_four_sport_desc">Smooth superbike that screams to 14,000 rpm through 6 virtual gears, with over-run crackles.</string>
+    <string name="engine_inline_four_250_name">Inline-4 250</string>
+    <string name="engine_inline_four_250_desc">Quarter-litre inline four that screams all the way to 17,000 rpm, with an intake howl, a hard rev limiter and quick-shifter upshifts through 6 gears.</string>
+    <string name="engine_inline_four_400_name">Inline-4 400</string>
+    <string name="engine_inline_four_400_desc">400 cc inline four with more body than the 250, screaming to 16,000 rpm with quick-shifter upshifts through 6 gears.</string>
+    <string name="engine_inline_four_600_name">Inline-4 600</string>
+    <string name="engine_inline_four_600_desc">Middleweight supersport four: a hard-edged howl to 16,000 rpm, overrun pops and crisp quick-shifts.</string>
+    <string name="engine_inline_four_1000_name">Inline-4 1000</string>
+    <string name="engine_inline_four_1000_desc">Litre superbike four: a deep bark at low rpm, a savage howl to 14,000 rpm and loud pops when you roll off.</string>
+    <string name="engine_supercharged_four_1000_name">Supercharged 1000</string>
+    <string name="engine_supercharged_four_1000_desc">Supercharged litre four: superbike exhaust plus a supercharger whine that rises with rpm and boost, and a chirp when you roll off.</string>
     <string name="engine_two_stroke_racer_name">2-Stroke Racer</string>
     <string name="engine_two_stroke_racer_desc">Raspy single-cylinder two-stroke with a ring-ding power band — the classic street racer.</string>
 

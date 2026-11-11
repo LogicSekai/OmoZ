@@ -108,4 +108,102 @@ class EngineCoreTest {
         }
         assertTrue(maxStep < 0.01f, "turbine rpm jumped $maxStep")
     }
+
+    @Test
+    fun glideStopsRightAfterAZeroFix() {
+        val g = SpeedGlide(1f)
+        for (tick in 0 until 200) { if (tick % 20 == 0) g.onFix(40f); g.advance(0.05f) }
+        g.onFix(0f)
+        var t = 0f
+        while (g.advance(0.05f) > 0f && t < 5f) t += 0.05f
+        assertTrue(t <= 0.4f, "speed reached 0 only after $t s")
+    }
+
+    @Test
+    fun glideFollowsBrakingBetweenFixes() {
+        // 1 Hz GPS, braking 10 km/h per second: half a second after a fix the glide must already
+        // be below that fix instead of waiting for the next one.
+        val g = SpeedGlide(1f)
+        for (tick in 0 until 200) { if (tick % 20 == 0) g.onFix(50f); g.advance(0.05f) }
+        g.onFix(40f)
+        repeat(20) { g.advance(0.05f) }
+        g.onFix(30f)
+        var v = 0f
+        repeat(10) { v = g.advance(0.05f) }
+        assertTrue(v < 28f, "glide lags braking: $v km/h")
+        assertTrue(v > 20f, "glide over-extrapolated: $v km/h")
+    }
+
+    @Test
+    fun engineFollowsAStopWithoutTail() {
+        for (engine in listOf(EngineCatalog.jetTurbine, EngineCatalog.vTwinCruiser)) {
+            val sim = EngineSimulator(engine.info)
+            repeat(400) { sim.update(0.05f, 60f, 0f, 80f) }
+            var st = EngineState()
+            repeat(10) { st = sim.update(0.05f, 0f, 0f, 80f) } // 0.5 s after the speed hit 0
+            assertTrue(st.rpmNorm < 0.08f, "${engine.info.id} still at rpm ${st.rpmNorm} 0.5 s after stopping")
+        }
+    }
+
+    @Test
+    fun bigTwinShiftsThroughFourGearsWithAThrottleCut() {
+        val sim = EngineSimulator(EngineCatalog.bigTwinClassic.info)
+        var speed = 0f
+        var maxGear = 0
+        var shifts = 0
+        var lastGear = 0
+        var minLoadWhileShifting = 1f
+        var maxRpmMoving = 0f
+        repeat(1400) {
+            speed += 0.06f // 1.2 km/h per second at 20 Hz
+            val st = sim.update(0.05f, speed, 0f, 100f)
+            if (st.gear > lastGear && lastGear >= 1) shifts++
+            lastGear = st.gear
+            maxGear = maxOf(maxGear, st.gear)
+            if (st.shift in 0.01f..0.5f) minLoadWhileShifting = minOf(minLoadWhileShifting, st.load)
+            if (st.gear in 1..3) maxRpmMoving = maxOf(maxRpmMoving, st.rpmNorm)
+        }
+        assertEquals(4, maxGear)
+        assertEquals(3, shifts)
+        assertTrue(minLoadWhileShifting < 0.05f, "throttle not cut during a shift: $minLoadWhileShifting")
+        assertTrue(maxRpmMoving < 0.7f, "big twin should short-shift, revved to $maxRpmMoving")
+    }
+
+    @Test
+    fun enginesWithoutShiftTimeNeverReportAShift() {
+        val sim = EngineSimulator(EngineCatalog.vTwinCruiser.info)
+        var speed = 0f
+        repeat(1000) {
+            speed += 0.1f
+            assertEquals(0f, sim.update(0.02f, speed, 0.5f, 100f).shift)
+        }
+    }
+
+    @Test
+    fun holdingTheThrottleStandingStillRidesThroughTheGears() {
+        for (engine in listOf(EngineCatalog.bigTwinClassic, EngineCatalog.vTwinCruiser, EngineCatalog.inlineFourSport)) {
+            val sim = EngineSimulator(engine.info)
+            var maxGear = 0
+            repeat(300) { maxGear = maxOf(maxGear, sim.update(0.05f, 0f, 1f, 80f).gear) } // 15 s held
+            assertEquals(engine.info.gears, maxGear, "${engine.info.id} did not reach top gear")
+            var st = EngineState()
+            repeat(120) { st = sim.update(0.05f, 0f, 0f, 80f) } // 6 s released
+            assertEquals(0, st.gear, "${engine.info.id} should coast back to neutral")
+        }
+    }
+
+    @Test
+    fun aShortThrottleBlipStandingStillStaysInNeutral() {
+        val sim = EngineSimulator(EngineCatalog.bigTwinClassic.info)
+        repeat(18) { assertEquals(0, sim.update(0.05f, 0f, 1f, 80f).gear) } // 0.9 s, like the notification blip
+    }
+
+    @Test
+    fun turbineDoesNotGetAVirtualRide() {
+        val sim = EngineSimulator(EngineCatalog.jetTurbine.info)
+        var st = EngineState()
+        repeat(200) { st = sim.update(0.05f, 0f, 1f, 80f) }
+        assertTrue(st.rpmNorm > 0.9f, "turbine should still spool up on throttle")
+        assertEquals(0, st.gear, "turbine has no gears to ride through")
+    }
 }

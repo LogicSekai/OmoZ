@@ -16,7 +16,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -41,7 +41,7 @@ import com.logicsekai.omoz.app.R
 import com.logicsekai.omoz.app.engine.GpsStatus
 import com.logicsekai.omoz.app.ui.MainViewModel
 import com.logicsekai.omoz.app.ui.components.AccentLinkRow
-import com.logicsekai.omoz.app.ui.components.AddEngineCard
+import com.logicsekai.omoz.app.ui.components.MoreEnginesCard
 import com.logicsekai.omoz.app.ui.components.EngineBanner
 import com.logicsekai.omoz.app.ui.components.EngineCard
 import com.logicsekai.omoz.app.ui.components.EngineStatusAvatar
@@ -77,6 +77,16 @@ fun HomeScreen(
 
     val sounds = EngineCatalog.all
     val selected = EngineCatalog.byId(settings.engineId)
+    // Only a few shortcuts on the home screen (the selected sound and the recently used ones,
+    // in catalog order so cards don't jump around); everything else is one tap away.
+    val quick = remember(selected.info.id, settings.recentEngineIds) {
+        val ids = (listOf(selected.info.id) + settings.recentEngineIds + HOME_FALLBACK_IDS + sounds.map { it.info.id })
+            .filter { id -> sounds.any { it.info.id == id } }
+            .distinct()
+            .take(HOME_QUICK_COUNT)
+            .toSet()
+        sounds.withIndex().filter { it.value.info.id in ids }
+    }
     val turbine = selected.info.kind == EngineKind.TURBINE
     val electric = selected.info.kind == EngineKind.ELECTRIC
     // Turbines and electric motors show a 0–100% gauge instead of rpm + gear.
@@ -129,7 +139,7 @@ fun HomeScreen(
                 contentPadding = PaddingValues(horizontal = 20.dp, vertical = 16.dp),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                itemsIndexed(sounds, key = { _, s -> s.info.id }) { i, s ->
+                items(quick, key = { it.value.info.id }) { (i, s) ->
                     val isSel = s.info.id == selected.info.id
                     EngineCard(
                         name = engineDisplayName(ctx, s.info),
@@ -140,10 +150,10 @@ fun HomeScreen(
                     )
                 }
                 item {
-                    AddEngineCard(
-                        stringResource(R.string.add_sound_title),
-                        stringResource(R.string.add_sound_sub),
-                        onClick = onOpenAbout,
+                    MoreEnginesCard(
+                        stringResource(R.string.home_more_title),
+                        stringResource(R.string.home_more_sub, sounds.size - quick.size),
+                        onClick = onOpenSounds,
                     )
                 }
             }
@@ -229,3 +239,9 @@ fun gpsLabel(status: GpsStatus): String = stringResource(
         GpsStatus.FIX -> R.string.gps_fix
     },
 )
+
+/** Engine shortcuts on the home screen (the rest is behind "More sounds"). */
+private const val HOME_QUICK_COUNT = 4
+
+/** Shortcuts before the rider has picked anything: one of each family. */
+private val HOME_FALLBACK_IDS = listOf("jet_turbine", "bullet_train_motor", "v_twin_cruiser", "inline_four_1000")

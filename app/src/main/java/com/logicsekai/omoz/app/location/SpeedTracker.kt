@@ -81,7 +81,7 @@ class SpeedTracker(private val context: Context) : LocationListener {
         }
         if (status != GpsStatus.FIX && smoothedKmh > 0f) {
             smoothedKmh = (smoothedKmh * 0.985f).let { if (it < 0.5f) 0f else it }
-            glide.onFix(smoothedKmh)
+            glide.decayTarget(0.985f)
         }
         return glide.advance(dt)
     }
@@ -105,6 +105,9 @@ class SpeedTracker(private val context: Context) : LocationListener {
         }
         if (raw < STATIONARY_DEADBAND_KMH) raw = 0f
         if (raw > 400f) raw = smoothedKmh // glitch
+        // Slowing down is followed immediately (the engine must stop when the vehicle stops);
+        // only increases are filtered, so noisy readings cannot make the engine surge.
+        if (raw < smoothedKmh) weight = 1f
         smoothedKmh += (raw - smoothedKmh) * weight
         if (smoothedKmh < 0.5f) smoothedKmh = 0f
 

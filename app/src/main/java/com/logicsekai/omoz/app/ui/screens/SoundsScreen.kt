@@ -20,9 +20,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.PlayArrow
 import androidx.compose.material3.Icon
@@ -131,7 +132,18 @@ fun SoundsScreen(vm: MainViewModel, onBack: () -> Unit) {
                 }
             }
 
-            itemsIndexed(sounds, key = { _, s -> s.info.id }) { i, s ->
+            // Grouped by engine family so a long list stays easy to scan.
+            val groups = sounds.withIndex().groupBy { soundGroup(it.value.info) }
+            SoundGroup.entries.forEach { group ->
+                val members = groups[group] ?: return@forEach
+                item(key = "group_${group.name}") {
+                    Text(
+                        "${stringResource(group.title)} · ${members.size}",
+                        style = MaterialTheme.typography.titleSmall, color = InkMuted,
+                        modifier = Modifier.padding(top = 8.dp, start = 4.dp),
+                    )
+                }
+                items(members, key = { it.value.info.id }) { (i, s) ->
                 val isSel = s.info.id == selected.info.id
                 SoundRow(
                     info = s.info,
@@ -143,6 +155,7 @@ fun SoundsScreen(vm: MainViewModel, onBack: () -> Unit) {
                     onPreview = { vm.preview(s.info.id) },
                     previewLabel = stringResource(R.string.preview),
                 )
+                }
             }
 
             item {
@@ -234,4 +247,26 @@ private fun loudnessStars(info: EngineInfo): Int = when (info.kind) {
     EngineKind.PISTON_2_STROKE -> 3
     EngineKind.PISTON_4_STROKE -> if (info.redlineRpm > 10000) 3 else 2
     else -> 1
+}
+
+/** Families shown as sections on the sounds screen, in this order. */
+private enum class SoundGroup(@StringRes val title: Int) {
+    JET(R.string.sound_group_jet),
+    ELECTRIC(R.string.sound_group_electric),
+    TWIN(R.string.sound_group_twin),
+    FOUR(R.string.sound_group_four),
+    TWO_STROKE(R.string.sound_group_two_stroke),
+    OTHER(R.string.sound_group_other),
+}
+
+private fun soundGroup(info: EngineInfo): SoundGroup = when (info.kind) {
+    EngineKind.TURBINE -> SoundGroup.JET
+    EngineKind.ELECTRIC -> SoundGroup.ELECTRIC
+    EngineKind.PISTON_2_STROKE -> SoundGroup.TWO_STROKE
+    EngineKind.PISTON_4_STROKE -> when (info.cylinders) {
+        2 -> SoundGroup.TWIN
+        4 -> SoundGroup.FOUR
+        else -> SoundGroup.OTHER
+    }
+    else -> SoundGroup.OTHER
 }

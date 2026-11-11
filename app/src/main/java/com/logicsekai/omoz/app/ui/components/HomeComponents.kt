@@ -28,7 +28,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Add
+import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowRight
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -134,9 +134,9 @@ fun EngineCard(
     }
 }
 
-/** White "add" card at the end of the engine row, pointing to the contribution guide. */
+/** White "more" card at the end of the home engine row: opens the full sound list. */
 @Composable
-fun AddEngineCard(title: String, subtitle: String, onClick: () -> Unit) {
+fun MoreEnginesCard(title: String, subtitle: String, onClick: () -> Unit) {
     OmoCard(Modifier.width(140.dp).height(236.dp), radius = 26.dp, onClick = onClick, padding = PaddingValues(18.dp)) {
         Spacer(Modifier.weight(1f))
         Text(title, style = MaterialTheme.typography.titleMedium, color = Ink)
@@ -149,7 +149,7 @@ fun AddEngineCard(title: String, subtitle: String, onClick: () -> Unit) {
                 .clip(CircleShape)
                 .background(Orange),
             contentAlignment = Alignment.Center,
-        ) { Icon(Icons.Rounded.Add, null, tint = CardWhite) }
+        ) { Icon(Icons.AutoMirrored.Rounded.KeyboardArrowRight, null, tint = CardWhite) }
         Spacer(Modifier.weight(0.4f))
     }
 }
